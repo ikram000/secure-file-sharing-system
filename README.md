@@ -1,7 +1,7 @@
 # Secure File Sharing System
 
 A full-stack secure file sharing web application built using React, Node.js, Express.js, and MongoDB.
-
+.
 ## Features
 
 * JWT Authentication
