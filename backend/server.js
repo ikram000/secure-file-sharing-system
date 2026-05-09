@@ -1,4 +1,5 @@
 require('dotenv').config();
+const helmet = require('helmet');
 const express = require('express');
 const cors = require('cors');
 const morgan = require('morgan');
@@ -8,7 +9,7 @@ connectDB();
 
 const app = express();
 
-
+app.use(helmet());
 app.use(cors());
 app.use(express.json());
 if (process.env.NODE_ENV === 'development') {

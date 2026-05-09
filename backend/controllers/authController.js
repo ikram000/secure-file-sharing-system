@@ -1,3 +1,4 @@
+const { validationResult } = require('express-validator');
 const User = require('../models/User');
 const bcrypt = require('bcryptjs');
 const jwt = require('jsonwebtoken');
@@ -5,6 +6,14 @@ const jwt = require('jsonwebtoken');
 
 exports.register = async (req, res) => {
   try {
+
+    const errors = validationResult(req);
+
+    if (!errors.isEmpty()) {
+      return res.status(400).json({
+        errors: errors.array()
+      });
+    }
     const { email, password } = req.body;
 
 
@@ -18,8 +27,8 @@ exports.register = async (req, res) => {
       return res.status(400).json({ msg: "Email already exists" });
     }
     if (password.length < 6) {
-  return res.status(400).json({ msg: "Weak password" });
-}
+      return res.status(400).json({ msg: "Weak password" });
+    }
 
     const hash = await bcrypt.hash(password, 10);
     const user = await User.create({
@@ -40,6 +49,14 @@ exports.register = async (req, res) => {
 
 exports.login = async (req, res) => {
   try {
+
+    const errors = validationResult(req);
+
+    if (!errors.isEmpty()) {
+      return res.status(400).json({
+        errors: errors.array()
+      });
+    }
     const user = await User.findOne({ email: req.body.email });
 
     if (!user) return res.status(400).json({ msg: "User not found" });
@@ -54,15 +71,15 @@ exports.login = async (req, res) => {
       { expiresIn: '1h' }
     );
 
-  res.json({
-  msg: "Login successful",
-  token,
-  user: {
-    id: user._id,
-    email: user.email,
-    role: user.role
-  }
-});
+    res.json({
+      msg: "Login successful",
+      token,
+      user: {
+        id: user._id,
+        email: user.email,
+        role: user.role
+      }
+    });
   } catch (err) {
     res.status(500).json(err);
   }
