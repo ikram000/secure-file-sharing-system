@@ -84,7 +84,7 @@ const Register = () => {
           </div>
 
           <h1>
-            Fortress OS
+           SecureVault FS
           </h1>
 
           <p>

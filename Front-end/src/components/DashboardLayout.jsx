@@ -54,10 +54,10 @@ const DashboardLayout = () => {
 
         <div className="sidebar-header">
 
-          <h2>Fortress OS</h2>
+          <h2>SecureVault FS</h2>
 
           <p>
-            SECURE NODE: ALPHA-7
+            SECURE NODE FILE VAULT
           </p>
 
         </div>

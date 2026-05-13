@@ -84,7 +84,7 @@ const Login = () => {
 
           </div>
 
-          <h1>Fortress OS</h1>
+          <h1>SecureVault FS</h1>
 
           <p>
             Secure File Sharing System
