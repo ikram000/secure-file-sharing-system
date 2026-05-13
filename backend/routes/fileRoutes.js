@@ -45,7 +45,7 @@ router.delete(
   deleteFile
 );
 
-// Admin - Get All Files
+// Admin - Get All File
 router.get(
   '/all-files',
   auth,
