@@ -1,0 +1,239 @@
+.auth-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 2rem;
+  background: radial-gradient(circle at center, #131722 0%, #0b0e14 100%);
+}
+
+.auth-content {
+  width: 100%;
+  max-width: 420px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.auth-header {
+  text-align: center;
+  margin-bottom: 32px;
+}
+
+.logo-icon-container {
+  width: 56px;
+  height: 56px;
+  border-radius: 14px;
+  background: var(--bg-card);
+  border: 1px solid var(--border-subtle);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 16px;
+  box-shadow: inset 0 4px 20px rgba(139, 121, 250, 0.1);
+}
+
+.logo-icon {
+  color: #a5b4fc;
+}
+
+.auth-header h1 {
+  font-size: 24px;
+  margin-bottom: 8px;
+  letter-spacing: -0.5px;
+}
+
+.auth-header p {
+  font-size: 14px;
+  color: var(--text-secondary);
+}
+
+.auth-card {
+  width: 100%;
+  padding: 32px;
+  margin-bottom: 40px;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: block;
+  font-size: 13px;
+  font-weight: 500;
+  color: #cbd5e1;
+  margin-bottom: 8px;
+}
+
+.label-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.label-row label {
+  margin-bottom: 0;
+}
+
+.forgot-link {
+  font-size: 12px;
+  color: var(--accent-primary);
+}
+
+.input-with-icon {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.input-icon {
+  position: absolute;
+  left: 14px;
+  color: #64748b;
+  pointer-events: none;
+}
+
+.input-with-icon .input-field {
+  padding-left: 42px;
+  background: rgba(15, 18, 26, 0.8);
+}
+
+.input-action-icon {
+  position: absolute;
+  right: 14px;
+  color: #64748b;
+  cursor: pointer;
+  background: none;
+  border: none;
+}
+
+.input-action-icon:hover {
+  color: var(--text-primary);
+}
+
+.checkbox-group {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 24px;
+}
+
+.checkbox-group input[type="checkbox"] {
+  appearance: none;
+  width: 16px;
+  height: 16px;
+  border: 1px solid var(--border-subtle);
+  border-radius: 4px;
+  background: rgba(15, 18, 26, 0.8);
+  cursor: pointer;
+  position: relative;
+}
+
+.checkbox-group input[type="checkbox"]:checked {
+  background: var(--accent-primary);
+  border-color: var(--accent-primary);
+}
+
+.checkbox-group input[type="checkbox"]:checked::after {
+  content: '';
+  position: absolute;
+  left: 4px;
+  top: 1px;
+  width: 4px;
+  height: 8px;
+  border: solid white;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+}
+
+.checkbox-group label {
+  font-size: 13px;
+  color: var(--text-secondary);
+  cursor: pointer;
+}
+
+.checkbox-group label a {
+  color: var(--accent-primary);
+}
+
+.auth-footer-link {
+  margin-top: 32px;
+  text-align: center;
+  border-top: 1px solid var(--border-subtle);
+  padding-top: 24px;
+}
+
+.auth-footer-link p {
+  font-size: 13px;
+  margin-bottom: 12px;
+}
+
+.auth-system-status {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  font-size: 11px;
+  color: #64748b;
+  text-align: center;
+  line-height: 1.4;
+}
+
+.status-item {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.status-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+}
+
+.status-dot.green {
+  background-color: var(--success);
+  box-shadow: 0 0 8px var(--success);
+}
+
+.status-divider {
+  width: 1px;
+  height: 16px;
+  background-color: var(--border-subtle);
+}
+
+/* Register specific */
+.success-text {
+  color: var(--success);
+  font-size: 11px;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  margin-top: 6px;
+}
+
+.strength-meter {
+  display: flex;
+  gap: 4px;
+  margin-top: 8px;
+}
+
+.strength-bar {
+  height: 4px;
+  flex: 1;
+  background: var(--border-subtle);
+  border-radius: 2px;
+}
+
+.strength-bar.active {
+  background: var(--success);
+}
+
+.strength-text {
+  font-size: 11px;
+  color: var(--success);
+  margin-top: 4px;
+  display: block;
+}
