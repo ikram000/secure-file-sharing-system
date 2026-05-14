@@ -42,8 +42,8 @@ A full-stack secure file sharing web application built using React, Node.js, Exp
 
 ```bash
 cd backend
+npm install
 nodemon server.js
-npm run dev
 ```
 
 ### Frontend Setup
